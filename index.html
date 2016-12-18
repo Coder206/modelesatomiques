@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Modèles Atomiques</title>
+    <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+    <script src="aframe-particle-system-component.js"></script>
+</head>
+
+<body>
+    <a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
+        <a-plane rotation="-90 0 0" height="8" width="20" color="black" position="6.88 0 0" scale="1.72 1 1" visible="true" material="color:#484848"
+            geometry="primitive:plane;height:8;width:20"></a-plane>
+        <a-sky src="hubble.jpg"></a-sky>
+        <!-- Dalton -->
+        <a-sphere color="yellow" radius="0.5" position="-8 0.5 -2"></a-sphere>
+        <a-sphere color="yellow" radius="0.5" position="-8 0.5 0"></a-sphere>
+        <a-sphere color="yellow" radius="0.5" position="-8 0.5 2"></a-sphere>
+        <!-- Thompson -->
+        <a-sphere color="yellow" radius="0.5" position="-4 0.5 -2" opacity="0.5"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="-4.25 0.7 -1.7"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="-4 0.3 -2.3"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="-4.15 0.5 -1.9"></a-sphere>
+
+        <a-sphere color="yellow" radius="0.5" position="-4 0.5 0" opacity="0.5"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="-4.25 0.7 0.2"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="-4 0.3 0.2"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="-4.15 0.5 0.1"></a-sphere>
+
+        <a-sphere color="yellow" radius="0.5" position="-4 0.5 2" opacity="0.5"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="-4.25 0.7 1.7"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="-3.8 0.3 2.11"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="-4.15 0.5 1.9"></a-sphere>
+        <!-- Rutherford -->
+        <a-entity rotation="90 90 0" position="0 0.5 0" scale="0.02 0.5 0.02" particle-system="preset: default; size: 2; texture: url(images/star.png); maxParticleCount: 250; maxAge: 2; accelerationSpread: 5, 0, 5; velocitySpread: 5 3.75 5;"></a-entity>
+        <a-entity position="0.09 0.5 0" rotation="0 0 0" material="color: red;" scale="1 1 1" visible="true" geometry=""></a-entity>
+        <a-entity position="6.3 0.54 0" rotation="0 0 0" scale="0.01 1.06 1.54" visible="true" material="color: #FFD700" geometry="primitive:box"></a-entity>
+        <a-entity collada-model="url(rutherford.dae)" material="color: lightbrown;" position="6.71 0 0" rotation="0 90 0" scale="3.14 5.9 3.14"
+            visible="true" id="cage"></a-entity>
+
+        <a-sphere color="yellow" radius="0.5" position="13 0.5 -2" opacity="0.5"></a-sphere>
+        <a-sphere radius="0.5" position="13 0.5 -2.01" rotation="0 0 0" scale="0.5 0.5 0.5" visible="true" material="color:#ffffff"
+            geometry="primitive:sphere;radius:0.5"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="13.25 0.7 -1.7"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="13 0.3 -2.3"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="13.15 0.5 -1.9"></a-sphere>
+
+        <a-sphere color="yellow" radius="0.5" position="13 0.5 0" opacity="0.5"></a-sphere>
+        <a-sphere radius="0.5" position="13 0.5 0" rotation="0 0 0" scale="0.5 0.5 0.5" visible="true" material="color:#ffffff;"
+            geometry="primitive:sphere;radius:0.5"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="13.25 0.7 0.2"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="13 0.3 0.2"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="13.15 0.5 0.1"></a-sphere>
+
+        <a-sphere color="yellow" radius="0.5" position="13 0.5 2" opacity="0.5"></a-sphere>
+        <a-sphere radius="0.5" position="13 0.5 2" rotation="0 0 0" scale="0.5 0.5 0.5" visible="true" material="color:#ffffff" geometry="primitive:sphere;radius:0.5"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="13.25 0.7 1.7"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="13.15 0.5 1.9"></a-sphere>
+        <!-- Bohr -->
+        <a-entity position="19.83 0.01 0.16" rotation="90 90 0" scale="-1 1 -2.9" visible="true" geometry="primitive:circle;radius:2.5"
+            material="color:lightblue;"></a-entity>
+        <a-entity position="19.83 0.05 0.16" rotation="90 90 0" scale="0.7 -0.7 0" visible="true" geometry="primitive:circle;radius:2.5"
+            material="color:blue;"></a-entity>
+        <a-sphere color="yellow" radius="0.5" position="19.86 0.5 0.16" rotation="0 0 0" scale="0.5 0.5 0.5" visible="true" material="color:white;"
+            geometry="primitive:sphere;radius:0.5"></a-sphere>
+        <a-sphere color="red" radius="0.04" position="18.1 0.5 0.1" rotation="0 0 0" scale="1 1 1" visible="true" material="color:red"
+            geometry="primitive:sphere;radius:0.04"></a-sphere>
+    </a-scene>
+</body>
+
+</html>
